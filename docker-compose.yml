@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  flask-rest-temp:
+    image: justsnaf/flask-rest-temp:latest
+    expose:
+      - 5000
+    networks:
+      flask-rest-temp_web:
+        aliases:
+          - flask-rest-temp
+    restart: unless-stopped
+
+  flask-rest-temp_watchtower:
+    image: containrrr/watchtower
+    expose:
+      - 8080
+    networks:
+      - flask-rest-temp_web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: flask-rest-temp --interval 15
+    restart: unless-stopped
+
+networks:
+  flask-rest-temp_web:
+    external: true
