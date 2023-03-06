@@ -9,6 +9,9 @@ services:
       flask-rest-temp_web:
         aliases:
           - flask-rest-temp
+    volumes:
+      - ./:/app
+
     restart: unless-stopped
 
   flask-rest-temp_watchtower:
