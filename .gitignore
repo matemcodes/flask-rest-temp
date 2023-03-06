@@ -1,0 +1,102 @@
+# Flask
+instance/
+.webassets-cache
+
+# Celery
+celerybeat.pid
+celerybeat-schedule
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Translations
+*.mo
+*.pot
+
+# PyInstaller
+*.spec
+*.manifest
+
+# Spyder settings
+.spyproject
+.spyderproject
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# mypy
+dmypy.json
+.dmypy.json
+.mypy_cache/
+
+# Byte-compiled
+# Optimized, DLL
+*.py[cod]
+*$py.class
+__pycache__/
+
+# Django
+*.log
+db.sqlite3
+local_settings.py
+db.sqlite3-journal
+
+# Environments
+.env
+env/
+ENV/
+.venv
+venv/
+env.bak/
+venv.bak/
+
+# Others
+*.so
+/site
+.pyre/ 
+target/
+.scrapy
+*.vscode
+*.sage.py
+docs/_build/
+.ropeproject
+.python-version
+__pypackages__/
+.ipynb_checkpoints
+
+# Test, Report
+.tox/
+.nox/
+.cache
+*.cover
+htmlcov/
+.coverage
+*.py,cover
+.coverage.*
+coverage.xml
+.hypothesis/
+nosetests.xml
+.pytest_cache/
+
+# Distribution, Pack
+lib/
+var/
+dist/
+eggs/
+*.egg
+build/
+.eggs/
+lib64/
+parts/
+sdist/
+wheels/
+.Python
+MANIFEST
+/downloads
+*.egg-info/
+develop-eggs/
+.installed.cfg
+pip-wheel-metadata/
+share/python-wheels/
