@@ -10,7 +10,7 @@ services:
         aliases:
           - flask-rest-temp
     volumes:
-      - ./:/app
+      - flask-rest-temp_data:/app
 
     restart: unless-stopped
 
@@ -28,3 +28,6 @@ services:
 networks:
   flask-rest-temp_web:
     external: true
+
+volumes:
+  flask-rest-temp_data:
