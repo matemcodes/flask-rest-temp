@@ -25,6 +25,38 @@ services:
     command: flask-rest-temp --interval 15
     restart: unless-stopped
 
+  flask-rest-temp_mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    expose:
+      - 3306
+    networks:
+      flask-rest-temp_web:
+        aliases:
+          - flask-rest-temp_mysql
+    volumes:
+      - ./data:/var/lib/mysql
+    restart: unless-stopped
+
+  flask-rest-temp_pma:
+    image: beeyev/phpmyadmin-lightweight:latest
+    links:
+      - flask-rest-temp_mysql
+    depends_on:
+      - flask-rest-temp_mysql
+    environment:
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+      PMA_HOST: flask-rest-temp_mysql
+    expose:
+      - 80
+    networks:
+       flask-rest-temp_web:
+         aliases:
+           - flask-rest-temp_pma
+    restart: unless-stopped
+
 networks:
   flask-rest-temp_web:
     external: true

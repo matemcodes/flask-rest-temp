@@ -4,7 +4,7 @@
   <img src="https://user-images.githubusercontent.com/126655075/223354284-3a55f95b-cd0c-42ea-9ceb-3c1cb8c10129.png">
   <hr>
   
-  ☑️ RestFUL • ☑️ SQLAlchemy • ☑️ Logging • ☑️ Docker • ☑️ CiCd
+  ☑️ Flask • ☑️ RestFUL • ☑️ SQLAlchemy • ☑️ Logging • ☑️ Docker • ☑️ CiCd
 </div>
 
 <br>
@@ -27,9 +27,9 @@
 
 #### ◼️ DEBUG
 ```json
-  "Debug=True"
+  "DEBUG=True"
   Or
-  "Debug=False"
+  "DEBUG=False"
 ```
 - With "True" value the app runs with the default runner in debug mode
 - With "False" value given, the app uses waitress to run the app in production
@@ -48,7 +48,7 @@
 
 #### ◼️ DATABASE_URL
 ```json
-  "DATABASE_URL": "mysql://root:root@flask-rest-temp_db:3306/flask-rest-temp"
+  "DATABASE_URL": "mysql://root:example@flask-rest-temp_db:3306/flask-rest-temp"
 ```
 - Specifies the database url that the app will connect to (mysql, postgresql, sqlite, etc.)
 
