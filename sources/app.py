@@ -24,10 +24,10 @@ with app.app_context():
     try:
         if not database_exists(engine):
             create_database(engine)
-        log.info("Db created")
         db.create_all()
-    except Exception as ex:
-        exit_app(f"Db error: {ex}")
+        log.info("Db created")
+    except Exception as db_error:
+        exit_app(f"Db error: {db_error}")
 
 if __name__ == '__main__':
     log.debug("Starting app")
