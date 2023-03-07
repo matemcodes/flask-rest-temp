@@ -7,4 +7,4 @@ def get_all_example():
 def create_new_example(args):
     example = Example(message=args['message'])
     db.session.add(example); db.session.commit()
-    return f"New example created: {example.message}"
+    return {"success": f"New example created: {example.message}"}

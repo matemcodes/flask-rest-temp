@@ -1,2 +1,2 @@
 def get_index_message():
-    return 'Hello World'
+    return {"message": "Hello, World"}
