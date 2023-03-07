@@ -24,7 +24,8 @@
 ## 🔹 .env
 - Create your .env file in your container's folder
 - The values below are given with representation purposes
-### ◼️ DEBUG
+
+#### ◼️ DEBUG
 ```json
   "Debug=True"
   Or
@@ -33,34 +34,40 @@
 - With "True" value the app runs with the default runner in debug mode
 - With "False" value given, the app uses waitress to run the app in production
 
-### ◼️ HOST_PORT
+#### ◼️ HOST_PORT
 ```json
   "HOST_PORT": "5000"
 ```
 - Specifies the port that the app will run on
 
-### ◼️ HOST_ADDRESS
+#### ◼️ HOST_ADDRESS
 ```json
   "HOST_ADDRESS": "0.0.0.0"
 ```
 - Specifies the host address that the app will run on
 
-### ◼️ DATABASE_URL
+#### ◼️ DATABASE_URL
 ```json
   "DATABASE_URL": "mysql://root:root@flask-rest-temp_db:3306/flask-rest-temp"
 ```
 - Specifies the database url that the app will connect to (mysql, postgresql, sqlite, etc.)
 
-<br>
 
 ## 🔹 Usage
 - Edit the docker-compose.yml file
-  - Img name, You can also add your db- pma- etc. here
+  - Modify the image name to your image
+  - You can also add your db- pma- etc. here
  
 - Run the docker-compose.yml file
   - It will pull the image from dockerhub
   - After pulling, it starts the app and you can access it at host_address:host_port
 
+- The action creates a new image when a push comes to the main branch, and pushes it to dockerhub
+
 <br><hr>
 
-### ⭕ This template created for personal projects, but feel free to use and ask me if you have any question  ⭕
+<div align="center">
+  
+ ### ⭕ This template created for personal projects ⭕<br>⭕ But feel free to use and ask me if you have any question ⭕
+  
+</div>
